@@ -1,8 +1,11 @@
 name: Sync Notion to Website
 on:
   schedule:
-    - cron: '0 * * * *' # This automatically checks Notion for updates every hour
-  workflow_dispatch: # This adds a button so you can force an update instantly
+    - cron: '0 * * * *' # Checks Notion every hour
+  workflow_dispatch: # Allows manual syncing via the button
+
+permissions:
+  contents: write # Explicitly allows the script to save your Notion text into GitHub
 
 jobs:
   sync:
