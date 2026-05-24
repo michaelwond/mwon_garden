@@ -1,0 +1,25 @@
+name: Sync Notion to Website
+on:
+  schedule:
+    - cron: '0 * * * *' # This automatically checks Notion for updates every hour
+  workflow_dispatch: # This adds a button so you can force an update instantly
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Fetch Content from Notion
+        uses: YouXam/Notion-GitHub-Sync@v2
+        with:
+          notion_token: ${{ secrets.NOTION_TOKEN }}
+
+      - name: Deploy Changes
+        run: |
+          git config --global user.name "Notion Sync Bot"
+          git config --global user.email "bot@github.com"
+          git add .
+          git commit -m "Updated content from Notion" || exit 0
+          git push
