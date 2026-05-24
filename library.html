@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindy Library — Michael Wondwossen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="brand">Michael Wondwossen</a>
+            <button class="menu-trigger" id="menuBtn"><svg width="20" height="12" fill="none" stroke="#111"><path d="M0 1h20M0 6h20M0 11h20" stroke-width="2"/></svg></button>
+        </header>
+
+        <main>
+            <h2 style="font-size: 1.75rem; margin-bottom: 12px;">Lindy Library</h2>
+            <p style="margin-bottom: 48px;">The older it gets, the more useful it becomes. A curated collection of content I've been referencing for years.</p>
+            
+            <section>
+                <div class="section-title">Influence & Mastery</div>
+                <a href="https://example.com" target="_blank" class="item-row">
+                    <div class="item-title external-arrow">First Follower: Leadership Lessons from Dancing Guy</div>
+                    <div class="item-meta">Derek Sivers · Video</div>
+                </a>
+                <a href="https://example.com" target="_blank" class="item-row">
+                    <div class="item-title external-arrow">The 48 Laws of Power</div>
+                    <div class="item-meta">Robert Greene · Book</div>
+                </a>
+            </section>
+
+            <section>
+                <div class="section-title">Mental Models & Strategy</div>
+                <a href="https://example.com" target="_blank" class="item-row">
+                    <div class="item-title external-arrow">Poor Charlie's Almanack</div>
+                    <div class="item-meta">Charlie Munger · Book</div>
+                </a>
+            </section>
+        </main>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="closeBtn">&times;</button>
+        <ul class="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ideas.html">Ideas</a></li>
+            <li><a href="library.html" class="active">Lindy Library</a></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('menuOverlay').classList.add('active'));
+        document.getElementById('closeBtn').addEventListener('click', () => document.getElementById('menuOverlay').classList.remove('active'));
+    </script>
+</body>
+</html>

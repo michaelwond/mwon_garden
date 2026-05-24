@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Michael Wondwossen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="brand">Michael Wondwossen</a>
+            <button class="menu-trigger" id="menuBtn"><svg width="20" height="12" fill="none" stroke="#111"><path d="M0 1h20M0 6h20M0 11h20" stroke-width="2"/></svg></button>
+        </header>
+
+        <main>
+            <h2 style="font-size: 1.75rem; margin-bottom: 32px;">About</h2>
+            
+            <section>
+                <p>I'm an engineer and builder specializing in deployment systems. I spend my time helping teams adopt tools that change how software gets made.</p>
+                <p>Through all of it, I've been writing to make sense of what I'm seeing. This site acts as an open-source terminal for my thoughts.</p>
+            </section>
+
+            <section>
+                <div class="section-title">What I Believe</div>
+                <p><strong>Clarity over complexity.</strong> The best ideas are often the simplest ones. The work is finding them.</p>
+                <p><strong>Building beats planning.</strong> You learn more in a week of building than a month of strategizing. Ship early, iterate often.</p>
+                <p><strong>Writing is thinking.</strong> If you can't explain it simply, you don't understand it well enough.</p>
+            </section>
+        </main>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="closeBtn">&times;</button>
+        <ul class="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="ideas.html">Ideas</a></li>
+            <li><a href="library.html">Lindy Library</a></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('menuOverlay').classList.add('active'));
+        document.getElementById('closeBtn').addEventListener('click', () => document.getElementById('menuOverlay').classList.remove('active'));
+    </script>
+</body>
+</html>

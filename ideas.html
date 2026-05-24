@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas — Michael Wondwossen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="brand">Michael Wondwossen</a>
+            <button class="menu-trigger" id="menuBtn"><svg width="20" height="12" fill="none" stroke="#111"><path d="M0 1h20M0 6h20M0 11h20" stroke-width="2"/></svg></button>
+        </header>
+
+        <main>
+            <h2 style="font-size: 1.75rem; margin-bottom: 12px;">Ideas</h2>
+            <p style="margin-bottom: 48px;">Mental models, frameworks on thinking clearly, and things I've read recently that changed my perspective.</p>
+            
+            <section>
+                <div class="section-title">Mental Models & Decisions</div>
+                <div class="item-row"><div class="item-title">Constructive Conflict</div></div>
+                <div class="item-row"><div class="item-title">First Principles Thinking</div></div>
+                <div class="item-row"><div class="item-title">The 10% Strategy</div></div>
+            </section>
+
+            <section>
+                <div class="section-title">Wisdom & Observations</div>
+                <div class="item-row"><div class="item-title">Compounding Culture</div></div>
+                <div class="item-row"><div class="item-title">Embrace the Stuckness</div></div>
+            </section>
+        </main>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="closeBtn">&times;</button>
+        <ul class="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ideas.html" class="active">Ideas</a></li>
+            <li><a href="library.html">Lindy Library</a></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('menuOverlay').classList.add('active'));
+        document.getElementById('closeBtn').addEventListener('click', () => document.getElementById('menuOverlay').classList.remove('active'));
+    </script>
+</body>
+</html>
